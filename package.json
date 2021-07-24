@@ -1,5 +1,9 @@
 {
   "name": "time_to_answer",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "PWillans <82551205+PWillans@users.noreply.github.com>",
+  "license": "MIT"
 }
