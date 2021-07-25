@@ -1,7 +1,7 @@
 # gentelella
 
 Gentelella Admin is a free to use Bootstrap admin template.
-This template uses the default Bootstrap 4 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.
+This template uses the default Bootstrap 3 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.
 
 Theme uses several libraries for charts, calendar, form validation, wizard style interface, off-canvas navigation menu, text forms, date range, upload area, form autocomplete, range slider, progress bars, notifications and much more.
 
@@ -16,7 +16,7 @@ We would love to see how you use this awesome admin template. You can notify us 
 
 ## Documentation
 
-**[Documentation](https://colorlibhq.github.io/gentelella/)**
+**[Documentation](https://puikinsh.github.io/gentelella/)**
 
 ## Installation via Package Manager
 
@@ -39,7 +39,7 @@ npm install gentelella --save
 **yarn**
 
 ```
-yarn add gentelella
+yarn add gentelella --save
 ```
 ## How to contribute
 To contribute, please ensure that you have stable [Node.js](https://nodejs.org/) and [npm](https://npmjs.com) installed.
@@ -60,7 +60,7 @@ If `gulp` is installed, follow the steps below.
 * [Gentelella on Ruby on Rails 4](https://github.com/iogbole/gentelella_on_rails) thanks to Israel Ogbole.
 * [Gentelella on Rails 5.x](https://github.com/mwlang/gentelella-rails) thanks to Michael Lang
 * [Gentelella on Smarty 3](https://github.com/microvb/otp-thing) with one time password generator, validator, and QR code generator that has no web dependencies (self-contained) in PHP thanks to MicroVB INC
-* [Gentelella integrated into Symfony 5](https://github.com/mamless/Gentella-admin-Symfony-5) full stack PHP framework thanks to  Mamour Wane.
+* [Gentelella integrated into Symfony 3](https://github.com/krzysiekpiasecki/Gentelella) full stack PHP framework thanks to Krzysztof Piasecki.
 * [Gentelella on Yii framework 2](https://github.com/yiister/yii2-gentelella) with an asset bundle, a layout template and some widgets.
 * [Gentelella on Angular 2](https://github.com/kmkatsma/angular2-webpack-starter-gentelella) Angular Webpack Starter modified to utilize the Gentelella.
 * [Gentelella on Aurelia](https://github.com/kmkatsma/aurelia-gentelella) Typescript webpack skeleton modified to utilize the Gentelella.
@@ -69,8 +69,6 @@ If `gulp` is installed, follow the steps below.
 * [Gentelella on Flask](https://github.com/afourmy/flask-gentelella) Gentelella modified to fit as a Flask app
 * [Gentelella on CakePHP 3](https://github.com/backstageel/cakephp-gentelella-theme) Gentelella modified to work on CakePHP
 * [Gentelella right to left](https://github.com/mortezakarimi/gentelella-rtl) Gentelella modified to work with right to left languages like Persian
-* [Gentelella-rtl on Yii framework 2](https://github.com/mortezakarimi/yii2-gentelella-rtl) with an asset bundle, a layout template and some widgets. inspired from [Gentelella on Yii framework 2](https://github.com/yiister/yii2-gentelella)
-* [Gentelella by React](https://github.com/thomaslwq/react-admin) Gentelella realized by React
 
 Let us know if you have done integration for this admin template on other platforms and frameworks and we'll be happy to share your work.
 
