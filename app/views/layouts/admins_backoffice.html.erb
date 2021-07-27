@@ -64,11 +64,13 @@
                     <ul class="nav" id="side-menu">
                         <li>
                             <%= link_to admins_backoffice_welcome_index_path do%>
-                              <i class="fa fa-dashboard fa-fw"></i> Dashboard
+                            <i class="fa fa-dashboard fa-fw"></i> Dashboard
                             <% end %>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-users fa-fw"></i> Administradores</a>
+                        <%= link_to admins_backoffice_admins_path do %>
+                            <i class="fa fa-users fa-fw"></i> Administradores
+                        <% end %>
                         </li>
                     </ul>
                 </div>
@@ -82,7 +84,6 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                    <h1 class="page-header">LAYOUT ADMINS BACKOFFICE</h1>
                     <%= yield %>
                     </div>
                     <!-- /.col-lg-12 -->
