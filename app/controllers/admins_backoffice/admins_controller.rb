@@ -6,6 +6,10 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
     @admins = Admin.all
   end
 
+  def new
+    @admin = Admin.new
+  end
+
   def edit
   end
 
