@@ -11,23 +11,23 @@
         <th>#</th>
         <th>Descrição</th>
         <th>
-          <%= link_to new_admins_backoffice_subject_path, class:"btn btn-success btn-circle" do %>
+          <%= link_to new_admins_backoffice_question_path, class:"btn btn-success btn-circle" do %>
             <i class="fa fa-plus"></i>
           <% end %>
         </th>
       </tr>
     </thead>
     <tbody>
-      <% @subjects.each do |subject| %>
+      <% @questions.each do |question| %>
       <tr>
-        <td><%= subject.id %></td>
-        <td><%= subject.description %></td>      
+        <td><%= question.id %></td>
+        <td><%= question.description %></td>      
         <td style="width: 81px">
-          <%= link_to edit_admins_backoffice_subject_path(subject), class:"btn btn-primary btn-circle" do %>
+          <%= link_to edit_admins_backoffice_question_path(question), class:"btn btn-primary btn-circle" do %>
             <i class="fa fa-edit"></i>
           <% end %>
 
-          <%= link_to admins_backoffice_subject_path(subject), method: :delete, class:"btn btn-danger btn-circle", data: { confirm: "Deseja realmente excluir esta pergunta ?" } do %>
+          <%= link_to admins_backoffice_question_path(question), method: :delete, class:"btn btn-danger btn-circle", data: { confirm: "Deseja realmente excluir esta pergunta ?" } do %>
             <i class="fa fa-minus"></i>
           <% end %>
         </td>      
@@ -36,6 +36,6 @@
     </tbody>
   </table>
   <div class="text-center">
-    <%= paginate @subjects %>
+    <%= paginate @questions %>
   </div>
 </div>

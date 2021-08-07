@@ -21,7 +21,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   def edit
   end
 
-  def update
+  def update    
     if @subject.update(params_subject)
       redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área atualizado com sucesso!"
     else
@@ -30,7 +30,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   end
 
   def destroy
-    if @subject.destroy
+    if  @subject.destroy
       redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área excluído com sucesso!"
     else
       render :index
@@ -40,7 +40,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   private
   
   def params_subject
-    params_subject = params.require(:subject).permit(:description)
+    params.require(:subject).permit(:description)
   end
 
   def set_subject
