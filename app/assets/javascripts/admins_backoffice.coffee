@@ -7,3 +7,4 @@
 //= require metismenu/dist/metisMenu
 //= require sb-admin-2.js
 //= require bootstrap-growl-ifightcrime/jquery.bootstrap-growl
+//= require cocoon
