@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :subjects  #Assuntos/Áreas
     resources :questions #Perguntas
   end
-  
+
   devise_for :admins
   devise_for :users
 
