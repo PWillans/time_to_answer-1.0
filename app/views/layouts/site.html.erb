@@ -29,10 +29,10 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav"></ul>
-              <form class="navbar-form navbar-left">
-                <input class="form-control me-2" type="search" placeholder="Digite algo..." aria-label="Search">
+              <%= form_with(url: site_search_path, local: true, method: :get, class:"navbar-form navbar-left" ) do |form|  %>
+                <%= form.text_field :term, class:"form-control me-2", placeholder:"Digite algo..." %>
                 <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-              </form>
+              <% end %>
             <ul class="nav navbar-nav navbar-right">
               <% unless user_signed_in? %>
                 <li> <%= link_to 'Entrar', new_user_session_path %></li>
