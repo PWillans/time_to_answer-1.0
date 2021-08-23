@@ -7,7 +7,7 @@
 </div>
 
 <% @questions.each do |question| %>
-  <%= form_with url: site_answer_path, local: true do |form| %>
+  <%= form_with url: site_answer_path do |form| %>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title" style="font-weight:bold;"><%= question.description %></h3>
