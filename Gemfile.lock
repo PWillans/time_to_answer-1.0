@@ -42,8 +42,6 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
     arel (9.0.0)
     awesome_print (1.9.2)
     bcrypt (3.1.16)
@@ -114,7 +112,6 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    public_suffix (4.0.6)
     puma (3.12.6)
     racc (1.5.2)
     rack (2.2.3)
@@ -220,7 +217,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  addressable (>= 2.8.0)
   awesome_print
   bootsnap (>= 1.1.0)
   byebug
