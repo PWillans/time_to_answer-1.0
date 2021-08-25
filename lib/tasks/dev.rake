@@ -64,11 +64,20 @@ namespace :dev do
       rand(5..10).times do |i|
         params = create_question_params(subject)
         answers_array = params[:question][:answers_attributes]
-
+        
         add_answers(answers_array)
         elect_true_answer(answers_array)
         
         Question.create!(params[:question])
+      end
+    end
+  end
+
+  desc "Reseta o contador dos assuntos"
+  task reset_subject_counter: :environment do
+    show_spinner("Resetando contador dos assuntos...") do
+      Subject.find_each do |subject|
+        Subject.reset_counters(subject.id, :questions)
       end
     end
   end
