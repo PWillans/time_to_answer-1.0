@@ -1,4 +1,9 @@
 {
   "git.ignoreLimitWarning": true,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "solargraph.externalServer": {
+  
+    "host": "localhost",
+    "port": 7658
+  }
 }
