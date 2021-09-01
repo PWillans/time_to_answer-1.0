@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_one :user_profile
   accepts_nested_attributes_for :user_profile, reject_if: :all_blank
 
+  # Callback
+  after_create :set_statistic
+
   #Validations
   validates :first_name, presence: true, length: { minimum: 3 }, on: :update
             
@@ -16,4 +19,9 @@ class User < ApplicationRecord
     "#{self.first_name} #{self.last_name}"
   end
   
+  private
+
+  def set_statistic
+    AdminStatistic.set_event(AdminStatistic::EVENTS[:total_users])
+  end
 end
