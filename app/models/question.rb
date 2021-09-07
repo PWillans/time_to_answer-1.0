@@ -7,7 +7,7 @@ class Question < ApplicationRecord
   after_create :set_statistic
 
   # Kaminari
-  paginates_per 5
+  paginates_per 10
 
   # Scopes
   scope :_search_subject_, ->(page, subject_id){

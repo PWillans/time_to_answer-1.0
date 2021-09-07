@@ -2,8 +2,12 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   before_action :set_subject, only: [:edit, :update, :destroy]
 
   def index
-    @subjects = Subject.all.order(:description).page(params[:page])
-  end
+    respond_to do |format|
+      format.html {@subjects =   Subject.all.order(:id).page(params[:page])}
+      format.pdf  {@subjects =   Subject.all.order(:id)}
+      format.json {render json:( Subject.all.order(:id)), except: [:created_at, :updated_at, :questions_count]}
+    end
+  end 
 
   def new
     @subject = Subject.new

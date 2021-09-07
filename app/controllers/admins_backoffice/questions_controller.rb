@@ -3,7 +3,11 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   before_action :get_subjects, only: [:new, :edit]
 
   def index
-    @questions =  Question.includes(:subject).order(:description).page(params[:page])
+    respond_to do |format|
+      format.html {@questions =  Question.includes(:subject).order(:id).page(params[:page])}
+      format.pdf  {@questions =  Question.all.order(:id)}
+      format.json {render json:( Question.includes(:subject).order(:id)), except: [:created_at, :updated_at, :subject_id]}
+    end
   end
 
   def new
