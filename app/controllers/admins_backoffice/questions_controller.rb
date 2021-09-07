@@ -4,9 +4,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
 
   def index
     respond_to do |format|
-      format.html {@questions =  Question.includes(:subject).order(:id).page(params[:page])}
-      format.pdf  {@questions =  Question.all.order(:id)}
-      format.json {render json:( Question.includes(:subject).order(:id)), except: [:created_at, :updated_at, :subject_id]}
+      format.html { @questions = Question.all.order(:id).page(params[:page]) }
+      format.pdf  { @questions = Question.all.order(:id) }
+      format.json { @questions = Question.all.order(:id) }
     end
   end
 
@@ -15,8 +15,8 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   end
 
   def create
-  @question = Question.new(params_question)
-    if @question.save
+    @question = Question.new(params_question)
+    if  @question.save
       redirect_to admins_backoffice_questions_path, notice: "Questão cadastrada com sucesso!"
     else
       render :new
@@ -26,9 +26,9 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   def edit
   end
 
-  def update
+  def update    
     if @question.update(params_question)
-      redirect_to admins_backoffice_questions_path, notice: "Questão atualizada com sucesso!"
+      redirect_to admins_backoffice_questions_path, notice: "Questão atualizado com sucesso!"
     else
       render :edit
     end
@@ -43,10 +43,10 @@ class AdminsBackoffice::QuestionsController < AdminsBackofficeController
   end
 
   private
-
+  
   def params_question
     params.require(:question).permit(:description, :subject_id,
-    answers_attributes: [:id, :description, :correct, :_destroy])
+      answers_attributes: [:id, :description, :correct, :_destroy])
   end
 
   def set_question

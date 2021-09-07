@@ -3,11 +3,11 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def index
     respond_to do |format|
-      format.html {@subjects =   Subject.all.order(:id).page(params[:page])}
-      format.pdf  {@subjects =   Subject.all.order(:id)}
-      format.json {render json:( Subject.all.order(:id)), except: [:created_at, :updated_at, :questions_count]}
+      format.html { @subjects = Subject.all.order(:id).page(params[:page]) }
+      format.pdf  { @subjects = Subject.all.order(:id) }
+      format.json { @subjects = Subject.all.order(:id) }
     end
-  end 
+  end
 
   def new
     @subject = Subject.new
@@ -15,7 +15,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def create
     @subject = Subject.new(params_subject)
-    if @subject.save
+    if  @subject.save
       redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área cadastrado com sucesso!"
     else
       render :new
@@ -26,7 +26,7 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
   end
 
   def update    
-    if @subject.update(params_subject)
+    if  @subject.update(params_subject)
       redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área atualizado com sucesso!"
     else
       render :edit
