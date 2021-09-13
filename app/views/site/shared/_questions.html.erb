@@ -1,4 +1,5 @@
-<div class="jumbotron">   
+<!-- Main component for a primary marketing message or call to action -->
+<div class="jumbotron">
   <h3><%= msg_jumbotron %></h3>
 </div>
 
@@ -6,17 +7,17 @@
   <%= form_with url: site_answer_path do |form| %>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title" style="font-weight:bold;">
-          <span class="label label-primary" style="margin-right: 10px;">
+        <h3 class="panel-title">
+          <span class="label label-info" style="margin-right: 10px;">
             <%= link_to "#{question.subject.description} (#{question.subject.questions_count})", site_search_subject_path(question.subject_id, question.subject.description), style:"color: white;" %>
           </span>
-          <%= question.description %>
+          <%= sanitize question.description %>
         </h3>
       </div>
       <div class="panel-body">
         <ul>
           <% question.answers.each do |answer| %>
-            <li style="list-style: none">
+            <li style="list-style:none;" >
               <div class="radio">
                 <label>
                   <%= radio_button_tag 'answer_id', answer.id %>
@@ -25,9 +26,9 @@
               </div>
             </li>
           <% end %>
-          <li style="list-style: none">
-            <%= form.submit "Responder", class:"btn btn-default", id:"submit_#{question.id}" %>
-          </li>	
+          <li style="list-style:none;">
+            <%= form.submit "Responder", class:"btn btn-default", id: "submit_#{question.id}" %>
+          </li>
         </ul>
       </div>
     </div>
@@ -40,6 +41,6 @@
   </div>
 <% else %>
   <div class="alert alert-warning" role="alert">
-    Efetue o login para poder continuar respodendo as questões...
+    Efetue login para poder continuar respondendo as questões...
   </div>
 <% end %>
